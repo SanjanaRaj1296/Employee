@@ -1,4 +1,4 @@
-package com.te.autowire;
+package com.te.springconfiguration;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,25 +1,14 @@
-package com.te.runnableinter;
+package com.te.springannotation;
 
-public class Main {
-	public static void main(String[] args) {
-		Runnable myThread=new MyThread();
-		
-		System.out.println("The name of the current thread is:"+curre);
-		Thread currentThread=Thread.currentThread();
-		
-		// The code to set the name of the thread
-		currentThread.setName("Chotta Bheem");
-		System.out.println("The name of the current thread is:"+currentThread.getName());
-		Thread thread =new Thread(myThread);
-		thread.setName("Chutki");
-		thread.start();
-	
-		//The code for id
-		
-		System.out.println("The thread id is:"+currentThread.getId());
-		
-		
-		//System.out.println("Program is running");
-	}
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+public class Main 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext container = new ClassPathXmlApplicationContext("spring.xml");
+        Salary bean= container.getBean(Salary.class);
+        System.out.println(bean);
+    }
 }
